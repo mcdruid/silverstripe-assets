@@ -33,6 +33,7 @@ class FileLink extends DataObject
      *
      * @config
      * @var bool
+     * @deprecated 2.4.0 Will be removed without equivalent functionality to replace it
      */
     private static $hide_in_campaigns = true;
 }
