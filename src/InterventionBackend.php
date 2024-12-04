@@ -815,7 +815,7 @@ class InterventionBackend implements Image_Backend, Flushable
             $this->image->destroy();
         }
         // remove our temp file if it exists
-        if ((strpos(basename($this->getTempPath()), 'interventionimage_') === 0) && file_exists($this->getTempPath() ?? '')) {
+        if (str_starts_with(basename($this->getTempPath()), 'interventionimage_') && file_exists($this->getTempPath() ?? '')) {
             unlink($this->getTempPath() ?? '');
         }
     }
